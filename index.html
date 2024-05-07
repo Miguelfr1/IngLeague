@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ing League</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="icon" href="./img/inglogo.jpg"> <!-- L'icône du site pour l'onglet du navigateur -->
+
+    <style>
+
+
+        /* Ajoutez vos styles personnalisés ici */
+        main {
+            max-width: 600px;
+
+            justify-content: space-between;
+            padding: 0 20px; /* Ajoute un peu d'espace sur les côtés */
+        }
+
+        @media only screen and (min-width: 600px) {
+
+            main {
+                max-width: 100000px;
+            display: flex;
+
+            justify-content: space-between;
+            padding: 0 20px; /* Ajoute un peu d'espace sur les côtés */
+        }
+   
+
+}
+       
+
+
+        section {
+            max-width: 600px;
+            margin-bottom: 20px; /* Ajoute un peu d'espace entre les sections */
+            width: 100%; /* Ajustez la largeur selon vos besoins */
+            border: 1px solid #ccc;
+            padding: 30px;
+            box-sizing: border-box; /* Assure que la largeur inclut les bordures et le rembourrage */
+        }
+
+        footer {
+            bottom: 0; /* Pour aligner le footer en bas */
+            left: 0; /* Pour aligner le footer à gauche */
+            width: 100%; /* Pour que le footer prenne toute la largeur de la fenêtre */
+            text-align: center; /* Pour centrer le contenu du footer */
+        }
+
+        .custom-instagram {
+            font-size: 36px; /* Augmente la tailjkjkjle de l'icône */
+            color: black; /* Couleur noire par défaut */
+            transition: color 0.3s; /* Transition douce lors du changement de couleur */
+        }
+
+        .custom-instagram:hover {
+            color: #1D188E; /* Couleur violette au survol */
+        }
+
+
+        @font-face {
+    font-family: "Champions-Bold";
+    src: url('./Champions-Bold.ttf') format('truetype');
+}
+
+body {
+    background-color: #F1F3F8; /* Couleur de fond du body */
+    margin: 0;
+    padding: 0;
+    color: #010125;
+    
+
+    font-family: 'Manrope', sans-serif;
+    z-index: 112;
+}
+
+
+
+
+
+header {
+    background-color: #010125;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+
+/* Style pour le survol des liens */
+nav ul li a.active,
+nav ul li a:hover {
+    background-color: turquoise;
+    border-radius: 9999px;
+    color: black;
+}
+
+
+.logo {
+    width: 100px;
+    height: 100px;
+}
+
+
+
+
+
+
+
+nav ul li {
+    font-family: "Champions-Bold";
+
+    display: inline;
+    margin-right: 20px;
+    
+   
+}
+
+main{
+    margin: 20px auto; /* Centrer la poule horizontalement et espacement avec les autres poules */
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+
+
+
+h2 {
+    font-family: "Champions-Bold";
+
+    margin: 20px auto; /* Centrer la poule horizontalement et espacement avec les autres poules */
+    max-width: 600px; /* Limiter la largeur de la poule */
+    margin-top: 0;
+    font-weight: bold;
+    font-size: 40px;
+}
+@media only screen and (max-width: 600px) {
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    nav {
+        margin-top: 20px; /* Ajoute un espace entre les boutons et le haut du header */
+    }
+
+    nav ul {
+        margin-right: 20px;
+        margin-bottom: 30px;
+        
+    }
+
+    nav ul li {
+        display: block;
+        margin-right: 0;
+        margin-bottom: 10px; /* Espacement entre les boutons */
+    }
+    .logo{
+        height: 138px;
+        width: 138px;
+    }
+}
+
+
+        
+
+        
+    </style>
+        
+
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="./img/inglogo.JPG" alt="Logo ING 2 LEAGUE" class="logo">
+        <nav>
+            <ul>
+                <li><a href="tournoi1.html">ING 1 LEAGUE</a></li>
+                <li><a href="tournoi2.html">ING 2 LEAGUE</a></li>
+                <li><a href="tournoi3.html">ING 3 LEAGUE</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+
+<main>
+    <section id="presentation">
+        <h2>Qui sommes nous ?</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed gravida magna nec urna rutrum, a lacinia velit vulputate. Mauris dapibus odio in ex ultricies placerat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed gravida magna nec urna rutrum, a lacinia velit vulputate. Mauris dapibus odio in ex ultricies placerat. </p>
+    </section>
+
+    <section id="tournois">
+        <h2>Inscriptions au tournoi</h2>
+        <p>Fonctionnalité non disponible pour le moment Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed gravida magna nec urna rutrum, a lacinia velit vulputate. Mauris dapibus odio in ex ultricies placerat. </p>
+    </section>
+
+    <section id="jsp">
+        <h2>Lorem ipsum dolor</h2>
+        <p>Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed gravida magna nec urna rutrum, a lacinia velit vulputate. Mauris dapibus odio in ex ultricies placerat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed gravida magna nec urna rutrum, a lacinia velit vulputate. Mauris dapibus odio in ex ultricies placerat.</p>
+    </section>
+</main>
+
+<footer>
+
+    <a href="https://www.instagram.com/ing_league?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">
+        <i class="fab fa-instagram custom-instagram"></i>
+    </a>
+    <p>Copyright © 2024 Ing League. Tous droits réservés.</p>
+     
+</footer>
+
+<script></script>
+
+</body>
+</html>
