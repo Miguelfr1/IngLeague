@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ing League</title>
+    <link rel="stylesheet" href="stylesING2.css">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="./img/inglogo.jpg"> <!-- L'icône du site pour l'onglet du navigateur -->
+
+    <style>
+
+        /* Ajoutez vos styles personnalisés ici */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            padding: 3px;
+            margin-left: -45px;
+            border-radius: 5px;
+
+
+        }
+
+        .dropdown-content a {
+            color: black;
+            text-decoration: none;
+            display: block;
+            padding: 3px;
+
+        }   
+
+        .dropdown-content a:hover {
+            background-color: turquoise;
+            padding: 3px;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover .dropbtn {
+            background-color: #3e8e41;
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <img src="./img/ing1logo.jpg" alt="Logo ING 2 LEAGUE" class="logo">
+        <div class="nav-buttons">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li class="dropdown">
+                        <a href="#" onclick="afficherSection('phases-poules')">Phase de Poules</a>
+                        <div class="dropdown-content">
+                            <a href="#" onclick="afficherSection('phases-poules');">Poules</a>
+                            <a href="#" onclick="afficherSection('matchs');">Matchs</a>
+                        </div>
+                    </li>
+                    <li><a href="#" onclick="afficherSection('equipes-quarts')">Phases Finales</a></li>
+                </ul>
+            </nav>
+        </div>
+        
+        <!-- Div pour l'animation de l'ovale turquoise -->
+        <div id="rond-selection"></div>
+    </header>
+
+
+<div id="rond-selection"></div>
+<main>
+    <section id="phases-poules">
+        <h2>Poules</h2>
+        
+        <div class="poule">
+            <h3>Poule A</h3>
+            <table id="pouleA">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>MJ</th>
+                        <th>V</th>
+                        <th>N</th>
+                        <th>D</th>
+                        <th>BM</th>
+                        <th>BC</th>
+                        <th>DB</th>
+                        <th class="points">Points</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Lignes pour chaque équipe seront ajoutées via JavaScript -->
+                </tbody>
+            </table>
+        </div>
+
+        <div class="poule">
+            <h3>Poule B</h3>
+            <table id="pouleB">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>MJ</th>
+                        <th>V</th>
+                        <th>N</th>
+                        <th>D</th>
+                        <th>BM</th>
+                        <th>BC</th>
+                        <th>DB</th>
+                        <th class="points">Points</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Lignes pour chaque équipe seront ajoutées via JavaScript -->
+                </tbody>
+            </table>
+        </div>
+
+        <div class="poule">
+            <h3>Poule C</h3>
+            <table id="pouleC">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>MJ</th>
+                        <th>V</th>
+                        <th>N</th>
+                        <th>D</th>
+                        <th>BM</th>
+                        <th>BC</th>
+                        <th>DB</th>
+                        <th class="points">Points</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Lignes pour chaque équipe seront ajoutées via JavaScript -->
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="poule">
+            <h3>Poule D</h3>
+            <table id="pouleD">
+                <!-- Lignes pour chaque équipe seront ajoutées via JavaScript -->
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>MJ</th>
+                        <th>V</th>
+                        <th>N</th>
+                        <th>D</th>
+                        <th>BM</th>
+                        <th>BC</th>
+                        <th>DB</th>
+                        <th class="points">Points</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Lignes pour chaque équipe seront ajoutées via JavaScript -->
+                </tbody>
+            </table>
+        </div>
+    </section>
+</main>
+   
+    </section>
+
+</section>
+<main>
+
+
+
+    <section id="matchs">
+        <h2>Matchs</h2>
+        <div class="matchs">
+            <!-- Matchs de la Poule A -->
+            <h3>Poule A</h3>
+            <div class="match">
+                <table id="match1">
+                    <tr>
+                        <td class="equipe">Équipe 1</td>
+                        <td class="score"></td>
+                    </tr>
+                    <tr>
+                        <td class="equipe">Équipe 2</td>
+                        <td class="score"></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="match">
+                <table>
+                    <tr>
+                        <td class="equipe">Équipe 1</td>
+                        <td class="score"></td>
+                    </tr>
+                    <tr>
+                        <td class="equipe">Équipe 9</td>
+                        <td class="score"></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="match">
+                <table>
+                    <tr>
+                        <td class="equipe">Équipe 1</td>
+                        <td class="score">3</td>
+                    </tr>
+                    <tr>
+                        <td class="equipe">Équipe 15</td>
+                        <td class="score">7</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="match">
+                <table>
+                    <tr>
+                        <td class="equipe">Équipe 2</td>
+                        <td class="score">16</td>
+                    </tr>
+                    <tr>
+                        <td class="equipe">Équipe 9</td>
+                        <td class="score">6</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="match">
+                <table>
+                    <tr>
+                        <td class="equipe">Équipe 2</td>
+                        <td class="score">10</td>
+                    </tr>
+                    <tr>
+                        <td class="equipe">Équipe 15</td>
+                        <td class="score">1</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="match">
+                <table>
+                    <tr>
+                        <td class="equipe">Équipe 15</td>
+                        <td class="score"></td>
+                    </tr>
+                    <tr>
+                        <td class="equipe">Équipe 9</td>
+                        <td class="score"></td>
+                    </tr>
+                </table>
+            </div>
+            <!-- Matchs de la Poule B -->
+            <h3>Poule B</h3>
+            <div class="match">
+                <table>
+                    <tr>
+                        <td class="equipe">Équipe 13</td>
+                        <td class="score"></td>
+                    </tr>
+                    <tr>
+                        <td class="equipe">Équipe 6</td>
+                        <td class="score"></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="match">
+                <table>
+                    <tr>
+                        <td class="equipe">Équipe 13</td>
+                        <td class="score"></td>
+                    </tr>
+                    <tr>
+                        <td class="equipe">Équipe 8</td>
+                        <td class="score"></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="match">
+                <table>
+                    <tr>
+                        <td class="equipe">Équipe 13</td>
+                        <td class="score">9</td>
+                    </tr>
+                    <tr>
+                        <td class="equipe">Équipe 16</td>
+                        <td class="score">1</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="match">
+                <table>
+                    <tr>
+                        <td class="equipe">Équipe 6</td>
+                        <td class="score">8</td>
+                    </tr>
+                    <tr>
+                        <td class="equipe">Équipe 8</td>
+                        <td class="score">2</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="match">
+                <table>
+                    <tr>
+                        <td class="equipe">Équipe 6</td>
+                        <td class="score"></td>
+                    </tr>
+                    <tr>
+                        <td class="equipe">Équipe 16</td>
+                        <td class="score"></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="match">
+                <table>
+                    <tr>
+                        <td class="equipe">Équipe 8</td>
+                        <td class="score"></td>
+                    </tr>
+                    <tr>
+                        <td class="equipe">Équipe 16</td>
+                        <td class="score"></td>
+                    </tr>
+                </table>
+            </div>
+            <!-- Matchs de la Poule C -->
+            <h3>Poule C</h3>
+            <div class="match">
+                <table>
+                    <tr>
+                        <td class="equipe">Équipe 10</td>
+                        <td class="score"></td>
+                    </tr>
+                    <tr>
+                        <td class="equipe">Équipe 7</td>
+                        <td class="score"></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="match">
+                <table>
+                    <tr>
+                        <td class="equipe">Équipe 11</td>
+                        <td class="score">17</td>
+                    </tr>
+                    <tr>
+                        <td class="equipe">Équipe 5</td>
+                        <td class="score">2</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="match">
+                <table>
+                    <tr>
+                        <td class="equipe">Équipe 5</td>
+                        <td class="score"></td>
+                    </tr>
+                    <tr>
+                        <td class="equipe">Équipe 10</td>
+                        <td class="score"></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="match">
+                <table>
+                    <tr>
+                        <td class="equipe">Équipe 7</td>
+                        <td class="score"></td>
+                    </tr>
+                    <tr>
+                        <td class="equipe">Équipe 11</td>
+                        <td class="score"></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="match">
+                <table>
+                    <tr>
+                        <td class="equipe">Équipe 10</td>
+                        <td class="score"></td>
+                    </tr>
+                    <tr>
+                        <td class="equipe">Équipe 11</td>
+                        <td class="score"></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="match">
+                <table>
+                    <tr>
+                        <td class="equipe">Équipe 7</td>
+                        <td class="score"></td>
+                    </tr>
+                    <tr>
+                        <td class="equipe">Équipe 5</td>
+                        <td class="score"></td>
+                    </tr>
+                </table>
+            </div>
+
+            <!-- Matchs de la Poule D -->
+            <h3>Poule D</h3>
+            <div class="match">
+                <table>
+                    <tr>
+                        <td class="equipe">Équipe 12</td>
+                        <td class="score"></td>
+                    </tr>
+                    <tr>
+                        <td class="equipe">Équipe 4</td>
+                        <td class="score"></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="match">
+                <table>
+                    <tr>
+                        <td class="equipe">Équipe 14</td>
+                        <td class="score"></td>
+                    </tr>
+                    <tr>
+                        <td class="equipe">Équipe 3</td>
+                        <td class="score"></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="match">
+                <table>
+                    <tr>
+                        <td class="equipe">Équipe 3</td>
+                        <td class="score"></td>
+                    </tr>
+                    <tr>
+                        <td class="equipe">Équipe 12</td>
+                        <td class="score"></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="match">
+                <table>
+                    <tr>
+                        <td class="equipe">Équipe 4</td>
+                        <td class="score"></td>
+                    </tr>
+                    <tr>
+                        <td class="equipe">Équipe 14</td>
+                        <td class="score"></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="match">
+                <table>
+                    <tr>
+                        <td class="equipe">Équipe 14</td>
+                        <td class="score"></td>
+                    </tr>
+                    <tr>
+                        <td class="equipe">Équipe 12</td>
+                        <td class="score"></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="match">
+                <table>
+                    <tr>
+                        <td class="equipe">Équipe 4</td>
+                        <td class="score">2</td>
+                    </tr>
+                    <tr>
+                        <td class="equipe">Équipe 3</td>
+                        <td class="score">2</td>
+                    </tr>
+                </table>
+            </div>
+            
+            <!-- Ajoutez les autres matchs de la Poule C de la même manière -->
+    
+            <!-- Ajoutez les autres poules et leurs matchs de la même manière -->
+        </div>
+  
+    
+    </section>
+
+
+    
+    
+        
+
+</main>
+
+<section id="equipes-quarts">
+    <h2>Phases Finales</h2>
+    <p>Tirage au sort à venir</p>
+  
+    <div class="ligue-des-champions">
+      <div class="quart-de-finale">
+        <div class="match-container">
+          <div class="matc">Quart 1</div>
+          <div class="ligne"></div>
+          <div class="matc">Quart 2</div>
+        </div>
+  
+        <div class="match-container">
+          <div class="matc">Quart 3</div>
+          <div class="matc">Quart 4</div>
+        </div>
+      </div>
+  
+      <div class="demi-finale">
+        <div class="matc">Demi 1</div>
+        <div class="matc">Demi 2</div>
+      </div>
+      <div class="finale">
+        <div class="matc">Finale</div>
+      </div>
+    </div>
+</section>
+
+<style>
+            
+    .ligue-des-champions {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .matc {
+      width: 300px;
+      height: 100px;
+      border: 1px solid black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 10px; /* Ajoute de l'espace entre les matches */
+      border-radius: 10px;
+    
+    }
+    
+    .quart-de-finale {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      max-width: 1800px;
+    }
+    
+    .match-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 20px; /* Ajoute de l'espace entre les Phases Finales */
+      
+    }
+
+    
+    
+    .demi-finale {
+      display: flex;
+      justify-content: space-between;
+      width: 50%;
+      margin-top: -170px;
+    }
+    
+    .finale {
+      margin-top: -0px;
+    }
+    
+    .quart-de-finale .match:not(:last-child) {
+      border-bottom: 2px solid black;
+    }
+    
+    .demi-finale .match:first-child {
+      border-right: 2px solid black;
+    }
+    
+    @media only screen and (max-width: 600px) {
+        .ligue-des-champions {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .matc {
+      width: 100px;
+      height: 100px;
+      border: 1px solid black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .quart-de-finale {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+    }
+    
+    .demi-finale {
+      display: flex;
+      justify-content: space-between;
+      width: 50%;
+      margin-top: 50px;
+    }
+    
+    .finale {
+      margin-top: 50px;
+    }
+    
+    .quart-de-finale .match:not(:last-child) {
+      border-right: 2px solid black;
+    }
+    
+    .demi-finale .match:first-child {
+      border-right: 2px solid black;
+    }
+    
+    }
+
+    .meilleure-equipe {
+    background-color: #ced1da; /* Couleur de surlignage */
+    font-weight: bold;
+}
+
+ 
+    
+              </style>
+    
+
+<script>
+// Fonction pour ajouter la classe active au survol et conserver après le clic
+function setActiveLink(link) {
+        var links = document.querySelectorAll('nav ul li a');
+        links.forEach(function(l) {
+            l.classList.remove('active');
+        });
+        link.classList.add('active');
+    }
+
+    // Fonction pour afficher la section spécifiée et masquer l'autre
+    function afficherSection(sectionId) {
+        var sections = document.querySelectorAll(' section');
+        sections.forEach(function(section) {
+            if (section.id === sectionId) {
+                section.style.display = 'block';
+            } else {
+                section.style.display = 'none';
+            }
+        });
+    }
+
+    // Ajouter un écouteur d'événement clic à chaque lien
+    var links = document.querySelectorAll('nav ul li a');
+    links.forEach(function(link) {
+        link.addEventListener('click', function() {
+            setActiveLink(link);
+        });
+    });
+
+    // Données des équipes
+    var equipesPouleA = ["Équipe 1", "Équipe 2", "Équipe 9", "Équipe 15"];
+    var equipesPouleB = ["Équipe 6", "Équipe 8", "Équipe 13", "Équipe 16"];
+    var equipesPouleC = ["Équipe 5", "Équipe 7", "Équipe 10", "Équipe 11"];
+    var equipesPouleD = ["Équipe 3", "Équipe 4", "Équipe 12", "Équipe 14"];
+
+var statsEquipes = {
+        "Équipe 1": { MJ: 1, V: 0, N: 0, D: 1, BM: 3, BC: 7, DB: -4, Pts: 0 },
+        "Équipe 2": { MJ: 2, V: 2, N: 0, D: 0, BM: 26, BC: 7, DB: 19,Pts: 6 },
+        "Équipe 3": { MJ: 1, V: 0, N: 1, D: 0, BM: 2, BC: 2, DB: 0, Pts: 1 },
+        "Équipe 4": { MJ: 1, V: 0, N: 1, D: 0, BM: 2, BC: 2, DB: 0, Pts: 1 },
+        "Équipe 5": { MJ: 1, V: 0, N: 0, D: 1, BM: 2, BC: 17, DB: -15, Pts: 0 },
+        "Équipe 6": { MJ: 1, V: 1, N: 0, D: 0, BM: 8, BC: 2, DB: 6, Pts: 3 },
+        "Équipe 7": { MJ: 0, V: 0, N: 0, D: 0, BM: 0, BC: 0, DB: 0, Pts: 0 },
+        "Équipe 8": { MJ: 1, V: 0, N: 0, D: 1, BM: 2,BC: 8, DB: -6, Pts: 0 },
+        "Équipe 9": { MJ: 1, V: 0, N: 0, D: 0, BM: 15, BC: 3, DB: 12, Pts: 9 },
+        "Équipe 10": { MJ: 0, V: 0, N: 0, D: 0, BM: 0, BC: 0, DB: 0, Pts: 0  },
+        "Équipe 11": { MJ: 1, V: 1, N: 0, D: 0, BM: 17, BC: 2, DB: 15, Pts: 3 },
+        "Équipe 12": {MJ: 0, V: 0, N: 0, D: 0, BM: 0, BC: 0, DB: 0, Pts: 0 },
+        "Équipe 13": { MJ: 1, V: 1, N: 0, D: 0, BM: 9, BC: 1, DB: 8, Pts: 3 },
+        "Équipe 14": { MJ: 0, V: 0, N: 0, D: 0, BM: 0, BC: 0, DB: 0, Pts: 0 },
+        "Équipe 15": { MJ: 2, V: 1, N: 0, D: 1, BM: 8, BC: 13, DB: -5, Pts: 3 },
+        "Équipe 16": { MJ: 1, V: 0, N: 0, D: 0, BM: 1, BC: 9, DB: -8, Pts: 0 }
+    };
+
+    // Fonction pour initialiser les données des équipes
+    function initialiserEquipes(poule, equipeList) {
+        var tbody = document.getElementById(poule).getElementsByTagName('tbody')[0];
+        tbody.innerHTML = ''; // Supprimer le contenu existant du tableau
+
+        // Trier les équipes en fonction des critères spécifiés
+        equipeList.sort(function(a, b) {
+            // Comparer d'abord les points
+            if (statsEquipes[b].Pts !== statsEquipes[a].Pts) {
+                return statsEquipes[b].Pts - statsEquipes[a].Pts;
+            }
+            // En cas d'égalité de points, comparer la différence de buts
+            else if (statsEquipes[b].DB !== statsEquipes[a].DB) {
+                return statsEquipes[b].DB - statsEquipes[a].DB;
+            }
+            // En cas d'égalité de différence de buts, comparer les buts marqués
+            else if (statsEquipes[b].BM !== statsEquipes[a].BM) {
+                return statsEquipes[b].BM - statsEquipes[a].BM;
+            }
+            // En cas d'égalité de buts marqués, comparer les buts concédés (le moins est le meilleur)
+            else {
+                return statsEquipes[a].BC - statsEquipes[b].BC;
+            }
+        });
+
+        // Ajouter les équipes triées au tableau
+    equipeList.forEach(function(equipe, index) {
+            var tr = document.createElement('tr');
+            // Ajout de la classe spécifique pour les équipes à surligner
+            if (poule === 'pouleC' && index < 2) {
+                tr.classList.add('meilleure-equipe');
+            } else if ((poule === 'pouleA' || poule === 'pouleB' || poule === 'pouleD') && index < 2) {
+                tr.classList.add('meilleure-equipe');
+            }
+            tr.innerHTML = `<td>${equipe}</td><td>${statsEquipes[equipe].MJ}</td><td>${statsEquipes[equipe].V}</td><td>${statsEquipes[equipe].N}</td><td>${statsEquipes[equipe].D}</td><td>${statsEquipes[equipe].BM}</td><td>${statsEquipes[equipe].BC}</td><td>${statsEquipes[equipe].DB}</td><td>${statsEquipes[equipe].Pts}</td>`;
+            tbody.appendChild(tr);
+        });
+    }
+
+    // Initialisation des données des équipes pour chaque poule
+    initialiserEquipes('pouleA', equipesPouleA);
+    initialiserEquipes('pouleB', equipesPouleB);
+    initialiserEquipes('pouleC', equipesPouleC);
+    initialiserEquipes('pouleD', equipesPouleD);
+
+    // Ajout d'une nouvelle poule pour les meilleurs troisièmes
+   
+
+    // Listes des troisièmes de chaque poule
+    var troisiemesPouleA = equipesPouleA.slice(2, 3); // Récupère le troisième de la poule A
+    var troisiemesPouleB = equipesPouleB.slice(2, 3); // Récupère le troisième de la poule B
+
+    // Concaténation des troisièmes de chaque poule
+    var meilleursTroisiemes = troisiemesPouleA.concat(troisiemesPouleB);
+
+    // Trier les meilleurs troisièmes selon les critères spécifiés
+    meilleursTroisiemes.sort(function(a, b) {
+        // Comparer d'abord les points
+        if (statsEquipes[b].Pts !== statsEquipes[a].Pts) {
+            return statsEquipes[b].Pts - statsEquipes[a].Pts;
+        }
+        // En cas d'égalité de points, comparer la différence de buts
+        else if (statsEquipes[b].DB !== statsEquipes[a].DB) {
+            return statsEquipes[b].DB - statsEquipes[a].DB;
+        }
+        // En cas d'égalité de différence de buts, comparer les buts marqués
+        else if (statsEquipes[b].BM !== statsEquipes[a].BM) {
+            return statsEquipes[b].BM - statsEquipes[a].BM;
+        }
+        // En cas d'égalité de buts marqués, comparer les buts concédés (le moins est le meilleur)
+        else {
+            return statsEquipes[a].BC - statsEquipes[b].BC;
+        }
+    });
+
+
+    // Sélection de toutes les tables de score
+    const matchTables = document.querySelectorAll('.match table');
+
+// Pour chaque table
+matchTables.forEach(table => {
+    // Sélection des lignes
+    const rows = table.querySelectorAll('tr');
+
+    // Récupération des scores
+    const score1 = parseInt(rows[0].querySelector('.score').textContent);
+    const score2 = parseInt(rows[1].querySelector('.score').textContent);
+
+    // Comparaison des scores pour déterminer le vainqueur
+    if (score1 > score2) {
+        // Ajout de la classe max-score à la première ligne
+        rows[0].classList.add('meilleure-equipe');
+    } else if (score2 > score1) {
+        // Ajout de la classe max-score à la deuxième ligne
+        rows[1].classList.add('meilleure-equipe');
+    }
+});
+
+function afficherPoules() {
+        afficherSection('phases-poules');
+        afficherSection('matchs');
+    }
+
+
+    
+
+    // Initialiser les données des équipes dans la nouvelle poule
+    initialiserEquipes('pouleMeilleurTroisieme', meilleursTroisiemes);
+
+    // Surligner la meilleure équipe du troisième
+    document.querySelector('#pouleMeilleurTroisieme tbody tr:first-child').classList.add('meilleur-troisieme');
+
+   
+  
+
+</script>
+
+
+</body>
+</html>
