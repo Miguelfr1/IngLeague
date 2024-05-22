@@ -326,7 +326,7 @@
                         <td class="score">0</td>
                     </tr>
                     <tr>
-                        <td class="equipe"><img src="./img/ing3/TD11.jpg"  width="30" height="30"></td>
+                        <td class="equipe"><img src="./img/ing3/TD1.1.jpg"  width="30" height="30"></td>
 
                         <td class="equipe">Équipe 11</td>
                         <td class="score">3</td>
@@ -396,6 +396,7 @@
 <section id="equipes-quarts">
     <h2>Phases Finales</h2>
     <div class="ligue-des-champions">
+        <H3>Quarts de finales</H3>
         <div class="quart-de-finale">
             <div class="match-container">
                 <P>Quart de finale 1</P>
@@ -728,6 +729,70 @@ function initialiserEquipes(poule, equipeList) {
             return statsEquipes[a].BC - statsEquipes[b].BC;
         }
     });
+
+    var logosEquipes = {
+    "Eight FC": "TD0.1.jpg",
+    "Couscous United": "TD2.jpg",
+    "Bayern de Monique": "TD3.jpg",
+    "Équipe 4": "TD4.jpg",
+    "Strikers FC": "TD5-9.jpg",
+    "BrawlBall": "TD6.jpg",
+    "FC Ocho": "TD7-8.jpg",
+    "Équipe 8": "TD8.jpg",
+    "Équipe 9": "TD9.jpg",
+    "La Boucherie": "TD1.0.jpg",
+    "Équipe 11": "TD1.1.jpg",
+    "Inazuma Twelve": "TD1.2.jpg",
+   
+    
+    
+
+    // Ajoutez les autres équipes avec leurs logos correspondants ici
+};
+
+
+
+
+    
+
+    // Ajouter les équipes triées au tableau
+    equipeList.forEach(function(equipe, index) {
+        var tr = document.createElement('tr');
+        // Ajout de la classe spécifique pour les équipes à surligner
+        if (poule === 'pouleC' && index < 2) {
+            tr.classList.add('meilleure-equipe');
+        } else if ((poule === 'pouleA' || poule === 'pouleB' || poule === 'pouleD') && index < 2) {
+            tr.classList.add('meilleure-equipe');
+        }
+        var logoAndName = document.createElement('div');
+    logoAndName.classList.add('logo-and-name'); // Ajout d'une classe pour faciliter la mise en forme CSS
+    logoAndName.style.display = 'flex'; // Utiliser Flexbox pour aligner les éléments verticalement
+    
+    var img = document.createElement('img');
+    img.src = `./img/ing3/${logosEquipes[equipe]}`; // Chemin vers le logo de l'équipe
+    img.alt = "Logo de l'équipe"; // Texte alternatif pour l'image
+    img.style.width = '30px'; // Ajustement de la largeur de l'image
+    img.style.height = '30px'; // Ajustement de la hauteur de l'image
+    img.style.borderRadius = '50%'; // Arrondir l'image
+    logoAndName.appendChild(img);
+    
+    // Ajout d'espaces entre le logo et le nom de l'équipe
+    var space = document.createElement('span');
+    space.textContent = '\u00A0\u00A0\u00A0'; // Trois espaces vides
+    logoAndName.appendChild(space);
+    
+    var name = document.createElement('span');
+    name.textContent = equipe;
+    logoAndName.appendChild(name);
+    
+    var tdLogoAndName = document.createElement('td');
+    tdLogoAndName.appendChild(logoAndName); // Ajoute la cellule contenant le logo et le nom de l'équipe
+    
+    tr.appendChild(tdLogoAndName);
+    tr.innerHTML += `<td>${statsEquipes[equipe].MJ}</td><td>${statsEquipes[equipe].V}</td><td>${statsEquipes[equipe].N}</td><td>${statsEquipes[equipe].D}</td><td>${statsEquipes[equipe].BM}</td><td>${statsEquipes[equipe].BC}</td><td>${statsEquipes[equipe].DB}</td><td>${statsEquipes[equipe].Pts}</td>`;
+    tbody.appendChild(tr);
+        });
+    }
 
 
 
